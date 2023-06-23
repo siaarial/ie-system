@@ -12,7 +12,7 @@ url = env("DATABASE_URL")
 
 model User {
     id Int @id @default(autoincrement())
-    login String
+    login String @unique
     password String
     name String?
     expenses Expenses[]
